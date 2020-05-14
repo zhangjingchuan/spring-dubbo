@@ -16,11 +16,11 @@
 
     <dubbo:application name="hello-consumer-app"  />
 
+    <dubbo:registry address="zookeeper://192.168.31.121:2181"/>
+
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
     <dubbo:reference
-            registry="N/A"
             id="consumerService"
-            url="dubbo://localhost:20880"
             interface="com.youxuewen.dubbo.ServerApi" />
 </beans>
 
